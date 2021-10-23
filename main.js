@@ -1,4 +1,4 @@
-var UserAgent = "toolAuthor:tmakrine@gmail.com";
+var UserAgent = "basecode:tmakrine@gmail.com 'stolen':9003";
 var requestTimes = new Array();
 var requestsNum = 0;
 var nation;
