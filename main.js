@@ -1,7 +1,8 @@
 var UserAgent = "toolAuthor:tmakrine@gmail.com";
 var requestTimes = new Array();
 var requestsNum = 0;
-
+var nation;
+var nationInput;
 
 // avoid opening the page in several tabs 
 // REASON: if it is open in several tabs and requests are made from all of them, it will throw an error of "Too many requests"
@@ -52,8 +53,6 @@ alert("works")
 function validate() {
 
     validButton.disabled = true;
-    pauseButton.disabled = true;
-    contButton.disabled = true;
     alert("works");
 
     // validate:
@@ -61,7 +60,6 @@ function validate() {
     try {
         nation = nation.replace(/ /g, '_');
         if(nationExists()) {
-            startButton.disabled = false;
             console.log("Validatation: OK");
             document.getElementById("nationExists").innerHTML = "Validated Successfully!"
         }
