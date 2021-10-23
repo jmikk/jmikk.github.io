@@ -85,4 +85,12 @@ function nationExists() {
         return false;
 }
 
+function Getissues(){
+		$("#pups").on("input", function(){
+
+        alert("works!")
+    });
+
+}
+
 
