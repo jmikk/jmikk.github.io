@@ -53,7 +53,7 @@ $(document).ready(function(){
 function validate() {
 
     validButton.disabled = true;
-    alert("works");
+    
 
     // validate:
     
