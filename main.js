@@ -252,7 +252,7 @@ function makeMarketRequest() {
             }
         } else clearTimeout(t);
         }, delay);
-    if(cardData.length) createTable();
+    if(cardData.length) createTable(); 
 }
 ///////////
 
