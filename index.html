@@ -24,7 +24,31 @@
     <button id="validate" onclick="validate()" disabled>Validate</button>
     <p id="nationExists"></p>
 
+    <script>
+        function validate() {
+
+            validButton.disabled = true;
+            alert("works");
+
+    // validate:
     
+    try {
+        nation = nation.replace(/ /g, '_');
+        if(nationExists()) {
+            console.log("Validatation: OK");
+            document.getElementById("nationExists").innerHTML = "Validated Successfully!"
+        }
+        else {
+            console.log("Validation: FAILED");
+            document.getElementById("nationExists").innerHTML = "Nation does NOT exist!"
+        }
+    }
+    catch(err) {
+        console.log("ERROR:", err);
+        document.getElementById("nationExists").innerHTML = "Please enter a nation name!"
+    }
+}
+    </script>
 
 
 </body>
