@@ -16,7 +16,7 @@
 	<h1>Hello World</h1>
 
     <p>I'm hosted with GitHub Pages.</p>
-    <p>V1</p>
+    <p>V2</p>
 
 
 
@@ -25,6 +25,20 @@
     <input type="text" id="nation" name="name" required size="10"><br>
     <button id="validate" onclick="validate()" disabled>Validate</button>
     <p id="nationExists"></p>
+
+
+    <div class="form-group" id="credentialsFormGroup">
+                        <label class="control-label" for="credentials">
+                            Nation names and passwords
+                        </label>
+                        <span class="help-block">Nation names and passwords
+                            must be entered in the form "nation,password",
+                            with one pair on each line. For example:</span>
+                        <pre>Bigtopia,trees98
+Tinyland,asparagus1*
+Mediumville,$nowF@LL</pre>
+                        <textarea id="credentials" class="form-control" rows="10"></textarea>
+                    </div>
 
    
 
