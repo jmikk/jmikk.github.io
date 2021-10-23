@@ -86,10 +86,7 @@ function nationExists() {
 }
 
 function Getissues(){
-		$("#Start").on("input", function(){
-
-        alert("works!")
-    });
+		alert('hello ${pups}');
 
 }
 
