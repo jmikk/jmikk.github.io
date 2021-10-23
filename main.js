@@ -139,20 +139,13 @@ function getNationCards() {
 }
 
 
+// check if a card already exists in the array of nationCards (for owning a few copies of the same card)
+const exists = (a, b) =>   // -1 if not exists
+  nationCards.findIndex(([first, second]) => 
+    (first === a && second === b)
+  );
 
-function readNationXML(xhttpResponse) {
-    var xmlFile = xhttpResponse.responseXML;
-    var ids = xmlFile.getElementsByTagName("CARDID");
-    var seasons = xmlFile.getElementsByTagName("SEASON");
-    var len = ids.length;
-    nationCardsNumber = len;
-    for(var i = 0; i < len; i++) {
-        if(exists(ids[i].innerHTML, seasons[i].innerHTML) == -1)
-            nationCards.push([ids[i].innerHTML, seasons[i].innerHTML]);
-    }
-    uniqueNationCardsNumber = nationCards.length;
-    console.log(`N of cards: ${nationCardsNumber}\nUnique: ${uniqueNationCardsNumber}`)
-}
+
 
 function readMarketXML(xhttpResponse, cardID, season) {
     var xmlFile = xhttpResponse.responseXML;
