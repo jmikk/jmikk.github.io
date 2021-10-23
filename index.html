@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>Got issues?</title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+	<h1>Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
+
+
+    <div class="nationInput">
+        <label for="name">Input your nation name</label>
+        <br>
+        <input type="text" id="nation" name="name" required size="10"><br>
+        <button id="validate" onclick="validate()" disabled>Validate</button>
+        <p id="nationExists"></p>
+
+    </div>
 </body>
 </html>
