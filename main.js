@@ -47,13 +47,14 @@ $(document).ready(function(){
     });
 });
 
+
 // validate whether the nation exists or not
 function validate() {
 
     validButton.disabled = true;
     pauseButton.disabled = true;
     contButton.disabled = true;
-    alet("works");
+    alert("works");
 
     // validate:
     
