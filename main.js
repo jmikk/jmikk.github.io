@@ -1,24 +1,7 @@
-var table = document.createElement("TABLE");
 var UserAgent = "toolAuthor:tmakrine@gmail.com";
-var nation;
-var nationInput;
 var requestTimes = new Array();
 var requestsNum = 0;
-var nationCards = new Array();
-var nationCardsPaused = new Array();
-var nationCardsNumber;
-var uniqueNationCardsNumber;
-var processedCardsNumber = 0;
-var cardData = new Array();
-var cardsNumberOnMarket = 0;
-var junkPrices = {
-    'common' : 0.01,
-    'uncommon' : 0.05,
-    'rare' : 0.10,
-    'ultra-rare' : 0.20,
-    'epic' : 0.50,
-    'legendary' : 1.00
-}
+
 
 // avoid opening the page in several tabs 
 // REASON: if it is open in several tabs and requests are made from all of them, it will throw an error of "Too many requests"
@@ -52,9 +35,7 @@ window.addEventListener('storage', onLocalStorageEvent, false);
 
 $(document).ready(function(){
     // buttons
-    startButton = document.getElementById("getData");
-    contButton = document.getElementById("cont");
-    pauseButton = document.getElementById("pause");
+    
     validButton = document.getElementById("validate");
     
     nationInput = document.getElementById("nation");
@@ -72,20 +53,6 @@ function validate() {
     validButton.disabled = true;
     pauseButton.disabled = true;
     contButton.disabled = true;
-
-    // nullify everything/clear previous results. keep the sent request number.
-    processedCardsNumber = 0;
-    cardsNumberOnMarket = 0;
-    nationCards = [];
-    //clear table
-    var remTable = document.getElementsByTagName("TABLE");
-    if(remTable[0] != null){
-        remTable[0].remove();
-        table = document.createElement("TABLE");
-        console.log("removed")       
-    }
-    // remove the process status
-    document.getElementById("processed").innerHTML = "";
 
     // validate:
     
