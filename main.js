@@ -86,7 +86,8 @@ function nationExists() {
 }
 
 function Getissues(){
-		alert('hello ${pups}');
+	alert('Hello');
+		
 
 }
 
