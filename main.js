@@ -53,6 +53,7 @@ function validate() {
     validButton.disabled = true;
     pauseButton.disabled = true;
     contButton.disabled = true;
+    alet("works");
 
     // validate:
     
