@@ -86,7 +86,20 @@ function nationExists() {
 }
 
 function Getissues(){
-	alert('Hello');
+		http.open('POST','https://www.nationstates.net/cgi-bin/api.cgi/?nation=9007&q=issues')
+		http({
+                    headers: {
+                        "User-Agent": UserAgent,
+                        "Accept": "text/xml",
+                         'X-Password': "me"
+                    },})
+		ttp.send();
+		alert(http.status);
+
+
+		//'', headers={, 'X-Password': password[index].replace(" ","_")}, params={'nation':every, 'q':'issues'})
+
+
 		
 
 }
