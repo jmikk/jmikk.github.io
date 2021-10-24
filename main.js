@@ -93,7 +93,7 @@ function Getissues(){
                         "Accept": "text/xml",
                          'X-Password': "me"
                     },})
-		ttp.send();
+		http.send();
 		alert(http.status);
 
 
